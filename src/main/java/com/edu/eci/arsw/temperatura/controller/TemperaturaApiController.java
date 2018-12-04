@@ -30,7 +30,7 @@ public class TemperaturaApiController {
         System.out.println(tipo + valor);
         try {
             if (tipo == "fahr") {
-                System.out.println("entro");
+                System.out.println("entro a fahr ");
                 System.out.println(ts.getTemperaturaCelsius(valor));
                 return new ResponseEntity<>(ts.getTemperaturaCelsius(valor), HttpStatus.ACCEPTED);
             }
@@ -39,8 +39,10 @@ public class TemperaturaApiController {
                 return new ResponseEntity<>(ts.getTemperaturaFahrenheit(valor), HttpStatus.ACCEPTED);
             }
         } catch (Exception e) {
+            System.out.println(" Entro a catch");
             return new ResponseEntity<>("Error al obtener los grados de tipo: " + tipo + " con el valor : " + valor, HttpStatus.NOT_FOUND);
         }
+        System.out.println(" No entro al try ");
         return null;
     
     }

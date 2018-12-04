@@ -1,5 +1,5 @@
 function getConver(tipo, valor) {
-    alert(tipo + valor );
+    alert("El tipo es :" +tipo + " y su valor es :" + valor );
     axios.get('/temp/' + tipo + '/' + valor).then(function(response){ 
         par= document.getElementById("Data");
         var datos = response.data;        
