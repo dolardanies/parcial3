@@ -27,11 +27,14 @@ public class TemperaturaApiController {
 
     @RequestMapping(method = RequestMethod.GET, path = "/{tipo}/{valor}")
     public ResponseEntity<?> getConver(@PathVariable("tipo") String tipo, @PathVariable("valor") int valor) {
+        System.out.println(tipo + valor);
         try {
-            if (tipo == "Fahrenheit-Celsius") {
+            if (tipo == "fahr") {
+                System.out.println(ts.getTemperaturaCelsius(valor));
                 return new ResponseEntity<>(ts.getTemperaturaCelsius(valor), HttpStatus.ACCEPTED);
             }
-            if (tipo == "Celsius-Fahrenheit") {
+            if (tipo == "cels") {
+                System.out.println(ts.getTemperaturaCelsius(valor));
                 return new ResponseEntity<>(ts.getTemperaturaFahrenheit(valor), HttpStatus.ACCEPTED);
             }
         } catch (Exception e) {

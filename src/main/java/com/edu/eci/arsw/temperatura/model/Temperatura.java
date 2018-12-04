@@ -5,6 +5,8 @@
  */
 package com.edu.eci.arsw.temperatura.model;
 
+import static java.lang.System.console;
+
 /**
  *
  * @author Daniel Castiblanco
@@ -26,6 +28,7 @@ public class Temperatura {
      */
     public int convertirCelaFar(int valor){
         int fahr =(valor*(9/5))+32;
+        System.out.println(fahr);
         return fahr;
     }
     
@@ -36,6 +39,7 @@ public class Temperatura {
      */
     public int convertirFaraCel(int valor){       
         int cel =(valor-32)*(5/9);
+        System.out.println(cel);
         return cel;
     }
 

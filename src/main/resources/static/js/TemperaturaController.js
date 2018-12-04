@@ -1,14 +1,13 @@
 function getConver(tipo, valor) {
-    axios.get('/temp' + tipo + '/' + valor).then(function(response){
-        par= document.getElementById("Data").innerHTML = "";
+    alert(tipo + valor );
+    axios.get('/temp/' + tipo + '/' + valor).then(function(response){ 
+        par= document.getElementById("Data");
+        var datos = response.data;        
         var fila = document.createElement("P");
-        fila.innerHTML = response.data[c];
-        par.appendChild(fila); 
-        console.log(response.data[c]);
+        fila.innerHTML = response.data;
+        par.appendChild(fila);
     }).catch(function (error) {
-        console.log(error);
-        console.log(response.data[c]);
-        console.log(response.data);
+        console.log(error);    
         alert(" No es posible la conversion por problemas internos");
     });
 }
