@@ -30,6 +30,7 @@ public class TemperaturaApiController {
         System.out.println(tipo + valor);
         try {
             if (tipo == "fahr") {
+                System.out.println("entro");
                 System.out.println(ts.getTemperaturaCelsius(valor));
                 return new ResponseEntity<>(ts.getTemperaturaCelsius(valor), HttpStatus.ACCEPTED);
             }
