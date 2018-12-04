@@ -13,11 +13,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author Daniel Castiblanco
  */
 @SpringBootApplication
-public class RestApiApplication {  
+public class TemperaturaApiApplication {  
 
     
     public static void main(String[] args) {
-		SpringApplication.run(RestApiApplication.class, args);
+		SpringApplication.run(TemperaturaApiApplication.class, args);
 	}
 }
 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Parcial 3</title>
+        <link href="./css/diseno.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div> Conversor de Temperatura</div>
+        <form action="/my-handling-form-page" method="post">
+            <div>
+                <label for="Valor">Valor:</label>
+                <input id="valor" type="number"/>
+            </div>
+
+            <label for="SelectTipo">Tipo de Conversion</label>
+            <select id="tipo" class="form-control" onchange="">
+                <option value="cels">Fahrenheit-Celsius</option>
+                <option value="fahr">Celsius-Fahrenheit</option>
+
+            </select>
+            <div class="button">
+                <button type="button" onclick="getConver($('SelectTipo').val(),$('#Valor').val()) ">Convertir</button>
+            </div>
+        </form>
+        <div id="Data" role="alert">
+        </div>
+        
+        
+        <script src="./js/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+        <script src="./js/popper.min.js"></script>
+        <script src="./js/TemperaturaController.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </body>
+    
+</html>

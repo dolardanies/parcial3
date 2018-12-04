@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.edu.eci.arsw.temperatura.controller;
+package com.edu.eci.arsw.temperatura.model;
 
 /**
  *
